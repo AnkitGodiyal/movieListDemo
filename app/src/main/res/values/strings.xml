@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MovieList</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="poster">poster</string>
+    <string name="background_image">background image</string>
+    <string name="please_select_range">Filter via year range</string>
+    <string name="max_year">hello_blank_fragment</string>
+    <string name="ok">ok</string>
+    <string name="minDef">2019</string>
+    <string name="maxDef">2021</string>
+    <string name="filter">filter</string>
+    <string name="min_year">Min Year</string>
+    <string name="maximum_year">Max Year</string>
+    <string name="original_language">Original Language</string>
+    <string name="overview">Overview</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_filter">Filter</string>
+    <string name="menu_myMovies">My Movies</string>
+    <string name="menu_recent">Recent</string>
+    <string name="add_to_my_collection">add to my collection</string>
+    <string name="up">up</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="save_to_collection">+ Watchlist</string>
+    <string name="filter_via_genre">Filter via genre</string>
+    <string name="filter_this">Filter</string>
+    <string name="home">Home</string>
+    <string name="filterfragment">Filter</string>
+    <string name="details">Details</string>
+    <string name="mymovies">My Movies</string>
+    <string name="comingsoon">Coming Soon</string>
+</resources>

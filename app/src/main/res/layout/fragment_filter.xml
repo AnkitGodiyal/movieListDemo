@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="years"
+            type="com.ankit.tmdblistdemo.models.Year" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".ui.FilterFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/selectRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_select_range"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/minYear_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_ractangle_10"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/min_year"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:padding="15dp"
+                android:text="@{years.minYear ?? @string/minDef}"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/maxYear_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_ractangle_10"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/maximum_year"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:padding="15dp"
+                android:text="@{years.maxYear ?? @string/maxDef}"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/filter_via_genre"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/genreRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="15dp"
+            android:text="@string/filter_this"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+</layout>
